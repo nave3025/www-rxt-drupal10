@@ -1,0 +1,35 @@
+layout_builder:
+  js:
+    js/lb-plus.js: { attributes: { type: 'module' }}
+    js/misc/layout-builder.js: {}
+    js/misc/dnd-page-scroll.js: {}
+  css:
+    theme:
+      css/lb-plus/section.css: {}
+      css/lb-plus/sidebar.css: {}
+      css/lb-plus/toolbar.css: {}
+      css/lb-plus/drop-zone.css: {}
+      css/lb-plus/blank-page.css: {}
+      css/lb-plus/move-block.css: {}
+      css/lb-plus/layout-block.css:  {}
+  dependencies:
+    - core/drupal.displace
+    - core/drupal.message
+    - core/drupal.dialog
+    - toolbar/toolbar
+
+lb_plus_ui:
+  js:
+    js/lb-plus-ui.js: {}
+  dependencies:
+    - core/drupal.announce
+    - core/drupal.debounce
+
+settings:
+  js:
+    js/settings.js: {}
+  css:
+    theme:
+      css/settings.css: {}
+  dependencies:
+    - core/drupal.debounce

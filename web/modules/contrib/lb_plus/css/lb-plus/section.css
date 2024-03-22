@@ -1,0 +1,40 @@
+.lb-plus-section-admin {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: none;
+  opacity: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: var(--lb-plus-main-color);
+  font-size: 12px;
+  z-index: 10;
+}
+
+.lb-plus-section-admin a {
+  text-decoration: none;
+}
+
+.lb-plus-section {
+  position: relative;
+}
+
+.active .lb-plus-section.hover:hover {
+  box-shadow: 0 0 0 10px var(--lb-plus-main-color);
+  z-index: 10;
+}
+
+.active .lb-plus-section.hover:hover .lb-plus-section-admin {
+  display: flex;
+  opacity: 1;
+}
+
+.lb-plus-icon,
+#edit-actions.lb-plus-toolbar .lb-plus-icon {
+  height: 25px;
+  width: 25px;
+  margin: 1em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}

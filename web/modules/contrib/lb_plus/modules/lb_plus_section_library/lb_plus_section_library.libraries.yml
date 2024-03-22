@@ -1,0 +1,7 @@
+menu:
+  css:
+    theme:
+      css/menu.css: {}
+  dependencies:
+    - lb_plus/lb_plus
+    - lb_plus/layout_builder

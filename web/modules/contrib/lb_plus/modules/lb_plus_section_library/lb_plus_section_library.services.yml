@@ -1,0 +1,6 @@
+services:
+  lb_plus_section_library.event_subscriber:
+    class: Drupal\lb_plus_section_library\EventSubscriber\AdminButtons
+    arguments: ['@entity_type.manager', '@module_handler']
+    tags:
+      - { name: event_subscriber }

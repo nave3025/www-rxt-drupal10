@@ -1,0 +1,21 @@
+.drop-zone {
+  margin: .5em 0;
+  background-color: var(--lb-plus-main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .75em;
+  padding: .5em 0;
+  font-weight: 800;
+  color: white;
+  z-index: 15;
+}
+.drop-zone-hover {
+  color: black;
+  outline: 2px dashed #fedb60;
+  background-color: #ffd;
+}
+
+.js-layout-builder-region {
+  min-height: 40px;
+}

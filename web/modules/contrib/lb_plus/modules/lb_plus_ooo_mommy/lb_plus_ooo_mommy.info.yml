@@ -1,0 +1,13 @@
+name: 'Layout Builder + - Umami Demo'
+type: module
+description: 'An example of how to configure a site to use Layout Builder + using the Umami installation profile.'
+core_version_requirement: ^10 || ^11
+package: 'Layout Builder'
+dependencies:
+  - lb_plus:lb_plus
+  - field_sample_value:field_sample_value
+
+# Information added by Drupal.org packaging script on 2024-03-01
+version: '2.1.12'
+project: 'lb_plus'
+datestamp: 1709298588

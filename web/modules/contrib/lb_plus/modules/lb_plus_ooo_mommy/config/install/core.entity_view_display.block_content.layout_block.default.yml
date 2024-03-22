@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.layout_block
+    - field.field.block_content.layout_block.layout_builder__layout
+  module:
+    - layout_builder
+    - lb_plus
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+  lb_plus:
+    default_section:
+      layout_plugin: layout_onecol
+      label: ''
+    promoted_blocks:
+      'inline_block:basic': 'inline_block:basic'
+      'inline_block:layout_block': 'inline_block:layout_block'
+      'inline_block:media_block': 'inline_block:media_block'
+    block_config:
+      icon:
+        'inline_block:basic': /modules/contrib/lb_plus/assets/plain-text.svg
+        'inline_block:layout_block': /modules/contrib/lb_plus/assets/3column.svg
+        'inline_block:media_block': /modules/contrib/lb_plus/assets/image.svg
+id: block_content.layout_block.default
+targetEntityType: block_content
+bundle: layout_block
+mode: default
+content: {  }
+hidden:
+  langcode: true
+  layout_builder__layout: true

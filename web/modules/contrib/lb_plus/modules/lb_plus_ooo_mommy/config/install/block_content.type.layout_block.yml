@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: layout_block
+label: 'Layout Block'
+revision: 0
+description: 'Use this block to nest a Layout within another Layout.'

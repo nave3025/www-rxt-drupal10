@@ -1,0 +1,11 @@
+.lb-plus-layout-block,
+.layout-builder.active .layout {
+  min-height: 50px;
+}
+
+.layout-builder .layout-builder.active {
+  box-shadow: 0 0 0 3000px rgba(0, 0, 0, .5);
+  position: relative;
+  z-index: 99;
+  margin-top: 1em;
+}

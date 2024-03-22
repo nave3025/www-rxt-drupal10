@@ -1,0 +1,14 @@
+.lb-plus-settings-sidebar {
+  position: fixed;
+  right: 0;
+  top: 80px;
+  background-color: #2d2d2d;
+  color: white;
+  min-height: 100vh;
+  padding: 1em;
+  z-index: 9999;
+}
+
+h1.page-title {
+  color: var(--lb-plus-main-color);
+}

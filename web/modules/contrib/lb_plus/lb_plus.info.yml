@@ -1,0 +1,13 @@
+name: "Layout Builder +"
+description: "A drop in replacement for the Layout Builder UI."
+type: module
+core_version_requirement: ^10 || ^11
+package: 'Layout Builder'
+dependencies:
+  - drupal:layout_builder
+  - drupal:block
+
+# Information added by Drupal.org packaging script on 2024-03-01
+version: '2.1.12'
+project: 'lb_plus'
+datestamp: 1709298588

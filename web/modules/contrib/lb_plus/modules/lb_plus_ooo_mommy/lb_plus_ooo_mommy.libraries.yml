@@ -1,0 +1,5 @@
+# Umami needs a few tweaks atm.
+tweaks:
+  css:
+    component:
+      css/tweaks.css: {}

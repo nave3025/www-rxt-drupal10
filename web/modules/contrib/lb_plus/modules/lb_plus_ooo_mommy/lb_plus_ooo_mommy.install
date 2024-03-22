@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Layout Builder + Umami install file.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function lb_plus_ooo_mommy_install($is_syncing) {
+  // Configure the content types to use the Layout Builder + UI.
+  $content_type_configs = [
+    'core.entity_view_display.node.article.full',
+    'core.entity_view_display.node.page.full',
+    'core.entity_view_display.node.recipe.full',
+  ];
+  foreach ($content_type_configs as $config_name) {
+    $config = \Drupal::configFactory()->getEditable($config_name);
+    $third_party_settings = $config->get('third_party_settings');
+    $third_party_settings['lb_plus'] = [
+      'default_section' => [
+        'layout_plugin' => 'layout_onecol',
+        'label' => '',
+      ],
+      'promoted_blocks' => [
+        'inline_block:basic' => 'inline_block:basic',
+        'inline_block:layout_block' => 'inline_block:layout_block',
+        'inline_block:media_block' => 'inline_block:media_block',
+      ],
+      'block_config' => [
+        'icon' => [
+          'inline_block:basic' => '/modules/contrib/lb_plus/assets/plain-text.svg',
+          'inline_block:layout_block' => '/modules/contrib/lb_plus/assets/3column.svg',
+          'inline_block:media_block' => '/modules/contrib/lb_plus/assets/image.svg',
+        ],
+      ],
+    ];
+    $config->set('third_party_settings', $third_party_settings);
+    $config->save();
+  }
+
+  // Set the Layout Builder + UI color.
+  $config = \Drupal::configFactory()->getEditable('lb_plus.settings');
+  $config->set('colors', [
+    'main' => '#79bd8f',
+    'secondary' => '#c7c7c7',
+  ]);
+  $config->save();
+
+  // Tweak the auto generated text length.
+  $config = \Drupal::configFactory()->getEditable('field.field.block_content.basic.body');
+  $third_party_settings = $config->get('third_party_settings');
+  $third_party_settings['field_sample_value'] = [
+    'id' => 'random_text',
+    'configuration' => [
+      'parent_save' => '0',
+      'count' => '1',
+      'filter_format' => 'basic_html',
+    ],
+  ];
+  $config->set('third_party_settings', $third_party_settings);
+  $config->save();
+}

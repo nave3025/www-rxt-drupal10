@@ -1,0 +1,13 @@
+name: 'Layout Builder + - Layout Builder Block Decorator'
+type: module
+description: 'Adds nested layout support for the Layout Builder Block Decorator module.'
+core_version_requirement: ^10 || ^11
+package: 'Layout Builder'
+dependencies:
+  - lb_block_decorator:lb_block_decorator
+  - lb_plus:lb_plus
+
+# Information added by Drupal.org packaging script on 2024-03-01
+version: '2.1.12'
+project: 'lb_plus'
+datestamp: 1709298588

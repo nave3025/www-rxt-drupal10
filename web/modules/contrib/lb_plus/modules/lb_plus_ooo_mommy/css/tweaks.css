@@ -1,0 +1,8 @@
+/* Reveal the hidden media block context menu and hide the entity edit menu */
+.field--name-field-media article .contextual {
+  display: none;
+}
+
+#layout-builder {
+  background-color: #fff;
+}

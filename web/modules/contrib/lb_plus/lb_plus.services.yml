@@ -1,0 +1,27 @@
+services:
+  lb_plus.admin_buttons:
+    class: Drupal\lb_plus\EventSubscriber\AdminButtons
+    arguments: ['@entity_type.manager', '@module_handler']
+    tags:
+      - { name: event_subscriber }
+
+  lb_plus.no_help_block:
+    class: Drupal\lb_plus\Config\NoHelpBlock
+    tags:
+      - { name: config.factory.override, priority: 5 }
+
+  lb_plus.layout_block:
+    class: Drupal\lb_plus\EventSubscriber\LayoutBlock
+    arguments: ['@lb_plus.section_storage_handler', '@uuid']
+    tags:
+      - { name: event_subscriber }
+
+  lb_plus.section_storage_handler:
+    class: Drupal\lb_plus\SectionStorageHandler
+    arguments: ['@block_content.uuid_lookup', '@entity_type.manager', '@plugin.manager.layout_builder.section_storage', '@layout_builder.tempstore_repository']
+
+  lb_plus.event_subscriber:
+    class: Drupal\lb_plus\EventSubscriber\BlockComponentRenderArray
+    arguments: ['@lb_plus.section_storage_handler']
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,23 @@
+.section-library {
+  position: relative;
+}
+
+.section-library:hover .section-library-menu {
+  display: block;
+}
+
+.section-library-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 10px solid var(--lb-plus-main-color);
+  top: 100%;
+}
+
+.section-library-menu a {
+  white-space: nowrap;
+  padding-right: 1em;
+  display: flex;
+  align-items: center;
+  color: black;
+}

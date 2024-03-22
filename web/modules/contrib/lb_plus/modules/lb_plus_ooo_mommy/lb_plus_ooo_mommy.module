@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Layout Builder + Umami module file.
+ */
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function lb_plus_ooo_mommy_form_node_layout_builder_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#attached']['library'][] = 'lb_plus_ooo_mommy/tweaks';
+}

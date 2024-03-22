@@ -1,0 +1,107 @@
+/* Toolbar */
+#edit-actions.lb-plus-toolbar *:where(:not(svg, svg *, .ck-reset *)) {
+  all: revert;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+}
+
+#edit-actions.lb-plus-toolbar {
+  background-color: var(--lb-plus-main-color);
+  align-items: center;
+  position: fixed;
+  flex-wrap: wrap;
+  padding: 0.5em 1em;
+  display: flex;
+  z-index: 500;
+  bottom: 0;
+  margin: 0;
+  right: 0;
+  left: 0;
+}
+
+#edit-actions.lb-plus-toolbar .button {
+  background-color: var(--lb-plus-main-color);
+  font-size: 16px;
+  color: white;
+  border: none;
+  padding: 1em;
+  text-decoration: none;
+  margin: 0 1em 0 0;
+}
+
+#edit-actions.lb-plus-toolbar .js-form-wrapper {
+  margin-right: 1em;
+}
+
+#edit-actions.lb-plus-toolbar label {
+  color: white;
+}
+
+#edit-actions.lb-plus-toolbar .button:hover,
+#edit-actions.lb-plus-toolbar #lb-plus-toggle-sidebar:hover {
+  border: none;
+  outline: 1px solid white;
+  cursor: pointer;
+}
+
+#edit-actions.lb-plus-toolbar #lb-plus-toggle-sidebar {
+  transition: transform .125s ease-in-out;
+  align-self: center;
+  margin-left: auto;
+}
+
+#close-add-block-sidebar .lb-plus-icon,
+#edit-actions.lb-plus-toolbar .lb-plus-icon {
+  margin: 0.5em;
+}
+
+#edit-actions.lb-plus-toolbar .spin-move {
+  transform: rotate(45deg);
+}
+
+/* Toolbar Menu */
+#edit-actions.lb-plus-toolbar .lb-plus-toolbar-menu {
+  position: relative;
+}
+
+#edit-actions.lb-plus-toolbar .lb-plus-toolbar-menu a {
+  text-decoration: none;
+  white-space: nowrap;
+  align-items: center;
+  display: flex;
+  color: black;
+}
+
+#edit-actions.lb-plus-toolbar .lb-plus-toolbar-menu a .lb-plus-icon {
+  margin-right: 1em;
+}
+
+#edit-actions.lb-plus-toolbar .lb-plus-toolbar-menu h3 {
+  margin: 0;
+  padding: .5em .5em;
+}
+
+#edit-actions.lb-plus-toolbar .lb-plus-toolbar-menu h3:hover {
+  cursor: pointer;
+}
+
+#edit-actions.lb-plus-toolbar .lb-plus-toolbar-menu ul {
+  border: 10px solid var(--lb-plus-main-color);
+  background-color: white;
+  position: absolute;
+  list-style: none;
+  display: none;
+  padding: 1em;
+  bottom: 100%;
+  margin: 0;
+}
+
+#edit-actions.lb-plus-toolbar .lb-plus-toolbar-menu:hover ul {
+  display: block;
+  z-index: 500;
+}
+
+#edit-actions.lb-plus-toolbar .lb-plus-toolbar-menu .lb-plus-icon {
+  margin: 0;
+}

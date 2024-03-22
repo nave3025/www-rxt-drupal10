@@ -1,0 +1,14 @@
+.layout-builder__section .ui-state-drop {
+  margin: 1.25rem;
+  padding: 1.875rem;
+  outline: 2px dashed #fedb60;
+  background-color: #ffd;
+}
+
+.js-layout-builder-block:hover {
+  cursor: grab;
+}
+
+.layout-builder-block [tabindex="-1"] {
+  pointer-events: none;
+}
